@@ -1,0 +1,26 @@
+Before Debugging (i.e with segmentation fault)
+#include <stdio.h>
+
+int main()
+{
+        char *s="Janarthanan";
+        printf("Enter the string\n");
+        scanf("%s",s);
+        s[2]="j";
+        printf("%s",s);
+        return 0;
+}
+
+
+After debugging (i.e removing the pointer) 
+#include <stdio.h>
+
+int main()
+{
+        char s[20]="Janarthanan";
+        printf("Enter the string\n");
+        scanf("%s",s);
+        s[2]="j";
+        printf("%s",s);
+        return 0;
+}
